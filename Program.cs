@@ -1,27 +1,18 @@
-﻿// Программа, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
-System.Console.WriteLine("Введите число");
+﻿// Программа, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+System.Console.WriteLine("Введите число от 1 до 7 для определения того, выходной ли это день недели или нет");
 int Number = Convert.ToInt32(Console.ReadLine());
-if (Number<100)
+if (Number > 7 & Number < 1)
 {
-    System.Console.WriteLine("третьей цифры нет");
+    System.Console.WriteLine("Сказано же - от 1 до 7");
 }
 else
 {
-    if (Number<1000)
+    if (Number == 6|| Number == 7)
     {
-        int result1 = Number%100%10; 
-        System.Console.WriteLine(result1);
+        System.Console.WriteLine("Да, это выходной день");
     }
     else
     {
-        if (Number < 10000)
-        {
-        int result2 = Number%1000%100/10;
-        System.Console.WriteLine(result2);
-        }
-        else
-        {
-            System.Console.WriteLine("ваше число > 10.000 и этот вариант не проработан");
-        }
+        System.Console.WriteLine("Нет, это будний день");
     }
 }
